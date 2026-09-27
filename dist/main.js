@@ -64,14 +64,14 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   import('https://cdn.jsdelivr.net/npm/motion@latest/+esm').then(({ animate, inView }) => {
     document.querySelectorAll('.reveal').forEach((element, index) => {
       if (element.closest('.hero')) {
-        animate(element, { opacity: [0, 1], y: [28, 0] }, { duration: 0.8, delay: Math.min(index * 0.1, 0.35), easing: [0.22, 1, 0.36, 1] });
+        animate(element, { opacity: [0, 1], y: [28, 0] }, { duration: 0.8, delay: Math.min(index * 0.1, 0.35), ease: [0.22, 1, 0.36, 1] });
       } else {
         inView(element, () => {
-          animate(element, { opacity: [0, 1], y: [34, 0] }, { duration: 0.75, easing: [0.22, 1, 0.36, 1] });
+          animate(element, { opacity: [0, 1], y: [34, 0] }, { duration: 0.75, ease: [0.22, 1, 0.36, 1] });
         }, { margin: '0px 0px -70px 0px', amount: 0.1 });
       }
     });
     const visual = document.querySelector('.visual-v');
-    if (visual) animate(visual, { rotate: [-5, 5, -5] }, { duration: 9, repeat: Infinity, easing: 'ease-in-out' });
+    if (visual) animate(visual, { rotate: [-5, 5, -5] }, { duration: 9, repeat: Infinity, ease: 'easeInOut' });
   }).catch(() => {});
 }
