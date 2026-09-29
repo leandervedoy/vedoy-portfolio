@@ -20,12 +20,12 @@
       <header class="site-header" id="top">
         <a class="brand" href="#top" aria-label="Vedøy, til toppen"><span class="brand-mark" aria-hidden="true">V</span><span>VEDØY<span class="brand-period">.</span></span></a>
         <nav class="desktop-nav" aria-label="Hovedmeny">
-          <a href="#om">Om Vedøy</a><a href="#oppdateringer">Oppdateringer</a><a href="#prosjekter">Prosjekter</a><a href="#utviklere">For utviklere</a>
+          <a href="#om">Om Vedøy</a><a href="#oppdateringer">Oppdateringer</a><a href="#prosjekter">Prosjekter</a><a href="#sovereign">Sovereign Stack</a><a href="#utviklere">For utviklere</a>
         </nav>
         <a class="header-link" href="#kontakt">La oss snakke <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
       </header>
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobilmeny" hidden><a href="#om">Om Vedøy</a><a href="#oppdateringer">Oppdateringer</a><a href="#prosjekter">Prosjekter</a><a href="#utviklere">For utviklere</a><a href="#kontakt">Kontakt</a></nav>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobilmeny" hidden><a href="#om">Om Vedøy</a><a href="#oppdateringer">Oppdateringer</a><a href="#prosjekter">Prosjekter</a><a href="#sovereign">Sovereign Stack</a><a href="#utviklere">For utviklere</a><a href="#kontakt">Kontakt</a></nav>
 
       <main id="main">
         <section class="hero section-pad" id="om" aria-labelledby="hero-title">
@@ -77,15 +77,50 @@
           <div class="service-list"><a class="service-row reveal" href="https://www.vedoystudio.no/" target="_blank" rel="noopener noreferrer"><span class="service-nr">01</span><h3>Webdesign</h3><p>Digitale flater med tydelig retning, sterk identitet og god brukeropplevelse.</p><span class="service-icon" aria-hidden="true">↗</span></a><a class="service-row reveal" href="https://www.vedoystudio.no/" target="_blank" rel="noopener noreferrer"><span class="service-nr">02</span><h3>Utvikling</h3><p>Nettsider og grensesnitt bygget med omtanke for ytelse, tilgjengelighet og detaljer.</p><span class="service-icon" aria-hidden="true">↗</span></a><a class="service-row reveal" href="https://www.vedoyassist.no/" target="_blank" rel="noopener noreferrer"><span class="service-nr">03</span><h3>Teknologihjelp</h3><p>Personlig hjelp med PC, mobil, Wi-Fi og annet som stopper opp.</p><span class="service-icon" aria-hidden="true">↗</span></a></div>
         </section>
 
+        <section class="sovereign section-pad" id="sovereign" aria-labelledby="sovereign-title">
+          <div class="section-label"><span class="label-index">05 / SOVEREIGN STACK</span><span class="label-line"></span></div>
+          <div class="sovereign-hero reveal">
+            <p class="section-kicker">NORSK GRUNNMUR</p>
+            <h2 id="sovereign-title">Vi flytter teknologien <em>hjem.</em></h2>
+            <p>Vedoy Sovereign Stack er vårt oppgjør med skyens kostnader, juridiske bakdører og unødvendig kompleksitet. Vi bygger på norske servere, en ryddig kodebase og in-process dataflyt som gjør løsningene raskere, tryggere og enklere å eie.</p>
+          </div>
+          <div class="sovereign-grid">
+            <article class="sovereign-card reveal">
+              <span class="stack-level">NIVÅ 1</span>
+              <h3>Visjonen</h3>
+              <p>Data skal være underlagt norsk og europeisk lov. Når vi eier nøklene selv, kan vi gi kundene trygghet, forutsigbare kostnader og løsninger som tåler vekst.</p>
+              <ul><li>Norske servere</li><li>Flat serverkostnad</li><li>Personvern først</li></ul>
+            </article>
+            <article class="sovereign-card reveal">
+              <span class="stack-level">NIVÅ 2</span>
+              <h3>Maskinrommet</h3>
+              <p>Vi erstatter fragmenterte mikrotjenester med Go, PocketBase, Kamal og Litestream. Resultatet er en monolitt som utviklere kan forstå, kjøre lokalt og deploye uten dramatikk.</p>
+              <ul><li>Go + PocketBase</li><li>Kamal deploys</li><li>Litestream backup</li></ul>
+            </article>
+            <article class="sovereign-card reveal">
+              <span class="stack-level">NIVÅ 3</span>
+              <h3>Arkitekturen</h3>
+              <p>Compute og database bor tett sammen. SQLite kjører in-process, langlevende Go-prosesser håndterer live-feeder, og failover skjer via WAL-replikering fremfor et tungt orkestreringslag.</p>
+              <ul><li>0-network latency</li><li>Stateful over stateless</li><li>Blue/green uten Kubernetes</li></ul>
+            </article>
+          </div>
+          <div class="stack-diagram reveal" aria-label="Vedoy Sovereign Stack arkitektur">
+            <div><span>01</span><strong>Bruker</strong><small>Rask respons</small></div>
+            <div><span>02</span><strong>Go-prosess</strong><small>API, auth, realtime</small></div>
+            <div><span>03</span><strong>PocketBase</strong><small>SQLite in-process</small></div>
+            <div><span>04</span><strong>Litestream</strong><small>WAL til S3-silo</small></div>
+          </div>
+        </section>
+
         <section class="developer section-pad" id="utviklere" aria-labelledby="developer-title">
-          <div class="section-label light-label"><span class="label-index">05 / FOR UTVIKLERE</span><span class="label-line"></span></div>
+          <div class="section-label light-label"><span class="label-index">06 / FOR UTVIKLERE</span><span class="label-line"></span></div>
           <div class="developer-intro reveal"><p class="section-kicker">ÅPENT FOR ALLE SOM BYGGER</p><h2 id="developer-title">Bedre kode starter<br />med å <em>dele.</em></h2><p>Her samler vi gratis kodehjelp, praktiske eksempler og etter hvert API-er fra Vedøy. Start med en liten ressurs nå.</p></div>
           <div class="developer-grid"><div class="help-panel reveal"><div class="panel-heading"><span class="panel-icon">&lt;/&gt;</span><span>GRATIS KODEHJELP</span></div><h3>Et lite løft når koden stopper opp.</h3><p>Velg et tema og kopier et konkret startpunkt. Utforsk også VedoyCSS for komponenter og eksempler.</p><div class="topic-tabs vd-tabs" role="tablist" aria-label="Velg kodetema"><button type="button" class="vd-tab" role="tab" aria-selected="true" aria-controls="snippet-panel" data-topic="fetch">API-kall</button><button type="button" class="vd-tab" role="tab" aria-selected="false" aria-controls="snippet-panel" data-topic="css">CSS</button><button type="button" class="vd-tab" role="tab" aria-selected="false" aria-controls="snippet-panel" data-topic="debug">Feilsøking</button></div><div class="snippet-wrap" id="snippet-panel" role="tabpanel" aria-live="polite"><div class="snippet-top"><span id="snippet-title">Hent data trygt</span><button type="button" class="copy-button vd-btn vd-btn--ghost" id="copy-snippet" aria-label="Kopier kodeeksempel">Kopier ↗</button></div><pre><code id="snippet-code"></code></pre></div><a class="developer-link" href="https://vedoy-css.eiolf-leande-6585.chatgpt.site/" target="_blank" rel="noopener noreferrer">Åpne VedoyCSS <span aria-hidden="true">↗</span></a></div><div class="api-panel reveal"><div class="panel-heading"><span class="panel-icon">{ }</span><span>VEDØY API</span></div><div class="api-orb" aria-hidden="true"><span>API</span></div><div class="api-panel-bottom"><span class="coming-soon">BETA / VIA VEDØY STUDIO</span><h3>Verktøy du kan bygge videre med.</h3><p>Vedøy Studio viser API-nøkler, webhooks og utviklerressurser i beta. Se tilgjengeligheten der.</p><a class="developer-link" href="https://www.vedoystudio.no/" target="_blank" rel="noopener noreferrer">Utforsk utviklerverktøy <span aria-hidden="true">↗</span></a></div></div></div>
         </section>
 
-        <section class="contact section-pad" id="kontakt" aria-labelledby="contact-title"><div class="section-label"><span class="label-index">06 / NESTE STEG</span><span class="label-line"></span></div><div class="contact-content reveal"><p class="section-kicker">HAR DU EN IDÉ?</p><h2 id="contact-title">La oss skape<br /><em>noe bra.</em></h2><p>Fortell oss hva du vil bygge, eller følg med når nye prosjekter og ressurser fra Vedøy blir publisert.</p><a class="button button-dark vd-btn" href="mailto:leander@vedoystudio.no">Send en e-post <span aria-hidden="true">↗</span></a><a class="instagram-link" href="https://www.instagram.com/vedoynorge/" target="_blank" rel="noopener noreferrer">Følg @vedoynorge på Instagram ↗</a></div><span class="contact-asterisk" aria-hidden="true">✳</span></section>
+        <section class="contact section-pad" id="kontakt" aria-labelledby="contact-title"><div class="section-label"><span class="label-index">07 / NESTE STEG</span><span class="label-line"></span></div><div class="contact-content reveal"><p class="section-kicker">HAR DU EN IDÉ?</p><h2 id="contact-title">La oss skape<br /><em>noe bra.</em></h2><p>Fortell oss hva du vil bygge, eller følg med når nye prosjekter og ressurser fra Vedøy blir publisert.</p><a class="button button-dark vd-btn" href="mailto:leander@vedoystudio.no">Send en e-post <span aria-hidden="true">↗</span></a><a class="instagram-link" href="https://www.instagram.com/vedoynorge/" target="_blank" rel="noopener noreferrer">Følg @vedoynorge på Instagram ↗</a></div><span class="contact-asterisk" aria-hidden="true">✳</span></section>
       </main>
-      <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">V</span><span>VEDØY<span class="brand-period">.</span></span></a><p>Prosjekter, tjenester og verktøy fra Vedøy.</p><div class="footer-links"><a href="#om">Om</a><a href="#prosjekter">Prosjekter</a><a href="#utviklere">Utviklere</a><a href="https://www.instagram.com/vedoynorge/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#top">Til toppen ↑</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> VEDØY</span><span>DESIGNET OG BYGGET MED VEDOYCSS + MOTION</span></div></footer>
+      <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">V</span><span>VEDØY<span class="brand-period">.</span></span></a><p>Prosjekter, tjenester og verktøy fra Vedøy.</p><div class="footer-links"><a href="#om">Om</a><a href="#prosjekter">Prosjekter</a><a href="#sovereign">Sovereign Stack</a><a href="#utviklere">Utviklere</a><a href="https://www.instagram.com/vedoynorge/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#top">Til toppen ↑</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> VEDØY</span><span>DESIGNET OG BYGGET MED VEDOYCSS + MOTION</span></div></footer>
     </div>
   </body>
 </html>
