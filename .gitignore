@@ -1,3 +1,6 @@
 .sites-runtime/
 .sites-checkout/
 *.tar.gz
+.vercel/
+dist/.vercel/
+.env*
