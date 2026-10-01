@@ -34,6 +34,7 @@ function editProject(p) {
   $('#project-category').value = p?.category || '';
   $('#project-status').value = p?.status || '';
   $('#project-summary').value = p?.summary || '';
+  $('#project-url').value = p?.external_url || '';
   $('#project-accent').value = /^#[0-9a-f]{6}$/i.test(p?.accent) ? p.accent : '#eb6e66';
   $('#project-order').value = p?.sort_order ?? 100;
   $('#project-published').checked = p?.is_published || false;
@@ -54,6 +55,12 @@ $('#project-form').addEventListener('submit', async event => {
   const id = $('#project-id').value;
   const payload = { title: $('#project-title').value.trim(), slug: $('#project-slug').value.trim(), category: $('#project-category').value.trim(), status: $('#project-status').value.trim(), summary: $('#project-summary').value.trim(), accent: $('#project-accent').value, sort_order: Number($('#project-order').value), is_published: $('#project-published').checked };
   if (!id) payload.device_type = 'desktop';
+  const url = $('#project-url').value.trim();
+  if (url) {
+    try { if (new URL(url).protocol !== 'https:') return message('Prosjektlenken må bruke HTTPS.'); }
+    catch { return message('Skriv inn en gyldig prosjektlenke.'); }
+  }
+  payload.external_url = url || null;
   const { error } = id ? await db.from('projects').update(payload).eq('id', id) : await db.from('projects').insert(payload);
   if (error) return message(error.message);
   $('#project-form').hidden = true; message('Prosjektet er lagret.'); await loadProjects();

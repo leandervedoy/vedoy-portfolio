@@ -18,4 +18,8 @@ Innlogging bruker Supabase Auth. GitHub-knappen krever at OAuth-returadresse for
 
 ## Integrasjoner
 
-Supabase API og offentlige Vedøy-lenker fungerer nå. Tredjeparts økonomidata krever egne serverstyrte tilkoblinger og samtykke for hver leverandør. Tilgang til ChatGPT-apper kan ikke brukes som produksjonsnøkler på nettsiden.
+Supabase API og offentlig GitHub API brukes direkte av siden. Shopify-rapporten for september 2026 ble hentet gjennom den tilkoblede Shopify-appen og lagret som en datert rapport i en tabell som bare administratorer kan lese. Denne importen oppdateres ikke automatisk og summeres ikke inn i manuelle poster.
+
+Stripe-tilkoblingen krevde ny autentisering ved kontroll 2026-10-01. Ads Manager returnerte ingen tilgjengelige kontoer. Løpende tredjeparts økonomidata krever egne serverstyrte tilkoblinger for hver leverandør. Tilgang til ChatGPT-apper kan ikke brukes som produksjonsnøkler på nettsiden.
+
+Databaseskjemaet for endringene ligger i `database/20261001_admin_and_economy.sql`. Det bygger på eksisterende `projects` og `vedoy_profiles` og endrer ingen brukeres administratorrolle ved kjøring. Rolletildeling gjøres separat av en betrodd administrator.

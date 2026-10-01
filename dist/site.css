@@ -165,3 +165,5 @@ body{background:var(--paper);color:var(--ink)}
 @media(max-width:600px){.sovereign{padding-top:72px;padding-bottom:76px}.sovereign-hero{display:block;margin:45px 0 32px}.sovereign-hero>p:last-child{margin-top:20px}.sovereign h2{font-size:clamp(3rem,11vw,4.6rem)}.stack-diagram{grid-template-columns:1fr}.stack-diagram div{min-height:125px}.sovereign-card{padding:21px}}
 /* Public GitHub data, loaded only on request. */
 #load-github{background:transparent;cursor:pointer}#load-github:disabled{opacity:.6;cursor:wait}#github-projects{list-style:none;padding:0;margin:22px 0 0}#github-projects li{padding:13px 0;border-top:1px solid #668274}#github-projects a{color:#e4ecd9;font-weight:700;font-size:.85rem}#github-projects small{display:block;font-size:.72rem;line-height:1.5;margin-top:5px;color:#c0cfc6}
+.project-card[hidden],#featured-projects[hidden]{display:none!important}
+
